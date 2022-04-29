@@ -11,6 +11,11 @@
 		43ADBAF7281B33EC00DD6E86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADBAF6281B33EC00DD6E86 /* ContentView.swift */; };
 		43ADBAF9281B33EE00DD6E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43ADBAF8281B33EE00DD6E86 /* Assets.xcassets */; };
 		43ADBAFC281B33EE00DD6E86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43ADBAFB281B33EE00DD6E86 /* Preview Assets.xcassets */; };
+		43ADBB06281B34AD00DD6E86 /* CompositionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADBB05281B34AD00DD6E86 /* CompositionalView.swift */; };
+		43ADBB08281C7F6B00DD6E86 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADBB07281C7F6B00DD6E86 /* ImageModel.swift */; };
+		43ADBB0A281C7FD400DD6E86 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADBB09281C7FD400DD6E86 /* ImageFetcher.swift */; };
+		43ADBB0D281C838A00DD6E86 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 43ADBB0C281C838A00DD6E86 /* SDWebImage */; };
+		43ADBB13281C83DB00DD6E86 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 43ADBB12281C83DB00DD6E86 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,9 @@
 		43ADBAF6281B33EC00DD6E86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43ADBAF8281B33EE00DD6E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43ADBAFB281B33EE00DD6E86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		43ADBB05281B34AD00DD6E86 /* CompositionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalView.swift; sourceTree = "<group>"; };
+		43ADBB07281C7F6B00DD6E86 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		43ADBB09281C7FD400DD6E86 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43ADBB13281C83DB00DD6E86 /* SDWebImageSwiftUI in Frameworks */,
+				43ADBB0D281C838A00DD6E86 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +61,9 @@
 		43ADBAF3281B33EC00DD6E86 /* LazyCompositionLayout */ = {
 			isa = PBXGroup;
 			children = (
+				43ADBB04281B345200DD6E86 /* ViewModel */,
+				43ADBB03281B344B00DD6E86 /* Model */,
+				43ADBB02281B344100DD6E86 /* View */,
 				43ADBAF4281B33EC00DD6E86 /* LazyCompositionLayoutApp.swift */,
 				43ADBAF6281B33EC00DD6E86 /* ContentView.swift */,
 				43ADBAF8281B33EE00DD6E86 /* Assets.xcassets */,
@@ -65,6 +78,30 @@
 				43ADBAFB281B33EE00DD6E86 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43ADBB02281B344100DD6E86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43ADBB05281B34AD00DD6E86 /* CompositionalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43ADBB03281B344B00DD6E86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43ADBB07281C7F6B00DD6E86 /* ImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43ADBB04281B345200DD6E86 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43ADBB09281C7FD400DD6E86 /* ImageFetcher.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,10 @@
 			dependencies = (
 			);
 			name = LazyCompositionLayout;
+			packageProductDependencies = (
+				43ADBB0C281C838A00DD6E86 /* SDWebImage */,
+				43ADBB12281C83DB00DD6E86 /* SDWebImageSwiftUI */,
+			);
 			productName = LazyCompositionLayout;
 			productReference = 43ADBAF1281B33EC00DD6E86 /* LazyCompositionLayout.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,10 @@
 				Base,
 			);
 			mainGroup = 43ADBAE8281B33EC00DD6E86;
+			packageReferences = (
+				43ADBB0B281C838A00DD6E86 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				43ADBB11281C83DB00DD6E86 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 43ADBAF2281B33EC00DD6E86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43ADBB06281B34AD00DD6E86 /* CompositionalView.swift in Sources */,
 				43ADBAF7281B33EC00DD6E86 /* ContentView.swift in Sources */,
 				43ADBAF5281B33EC00DD6E86 /* LazyCompositionLayoutApp.swift in Sources */,
+				43ADBB08281C7F6B00DD6E86 /* ImageModel.swift in Sources */,
+				43ADBB0A281C7FD400DD6E86 /* ImageFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +387,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43ADBB0B281C838A00DD6E86 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		43ADBB11281C83DB00DD6E86 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		43ADBB0C281C838A00DD6E86 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43ADBB0B281C838A00DD6E86 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		43ADBB12281C83DB00DD6E86 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43ADBB11281C83DB00DD6E86 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43ADBAE9281B33EC00DD6E86 /* Project object */;
 }
